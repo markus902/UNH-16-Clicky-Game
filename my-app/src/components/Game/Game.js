@@ -7,8 +7,8 @@ import images from "./ImageList.json";
 class Game extends Component {
     state = {
         images,
-        score: 1,
-        topScore: 1,
+        score: 0,
+        topScore: 0,
         clicked: []
     }
 
@@ -28,11 +28,13 @@ class Game extends Component {
             score++;
             if (this.state.score >= this.state.topScore)
                 topScore++;
-        } else {
-            score = 1;
+
+        }
+        else {
+            score = 0;
             clicked = [];
             this.setState({
-                score: 1,
+                score: 0,
                 clicked: []
             })
         }
@@ -40,13 +42,22 @@ class Game extends Component {
             clicked: clicked,
             score: score,
             topScore: topScore
-        })
+        });
+        if (this.state.topScore == 12) {
+            this.setState({ topScore: 0, score: 0, clicked: [] });
+            alert("Congrats! Your achieved the highest score!");
+        }
     };
 
     render() {
         return (
             <div className="container">
-                <Nav className="row test-center" />
+                <div>
+                    <Nav className="row test-center"
+                        score={this.state.score}
+                        topScore={this.state.topScore}
+                    />
+                </div>
                 <div className="row justify-content-center" >
                     {
                         this.state.images.map(elem => (
