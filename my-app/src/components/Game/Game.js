@@ -4,25 +4,43 @@ import Nav from "../Nav";
 import images from "./ImageList.json";
 
 
-
 class Game extends Component {
     state = {
         images,
-        score: 0,
-        topScore: 0,
+        score: 1,
+        topScore: 1,
+        clicked: []
     }
 
-    handleClick = () => {
+    handleClick = (event) => {
+        let score = this.state.score;
+        let topScore = this.state.topScore;
+        let id = event.target.id;
+        let clicked = this.state.clicked;
 
-        let currentScore = this.state.score;
+        console.log(score, topScore);
 
-        currentScore++;
-        // increment Score
-        this.setState({ score: currentScore });
-        console.log(currentScore);
+        // shuffle image array
+        images.sort(function () { return .5 - Math.random(); });
 
-
-
+        if (clicked.indexOf(id)) {
+            clicked.push(id);
+            score++;
+            if (this.state.score >= this.state.topScore)
+                topScore++;
+        } else {
+            score = 1;
+            clicked = [];
+            this.setState({
+                score: 1,
+                clicked: []
+            })
+        }
+        this.setState({
+            clicked: clicked,
+            score: score,
+            topScore: topScore
+        })
     };
 
     render() {
@@ -37,6 +55,7 @@ class Game extends Component {
                                 id={elem.id}
                                 key={elem.id}
                                 handleClick={this.handleClick}
+                                id={elem.id}
                             />
                         ))
                     }
