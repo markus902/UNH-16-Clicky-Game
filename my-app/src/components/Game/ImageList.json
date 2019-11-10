@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "url": "./images/land1.jpg",
+        "clicked": false
+    },
+    {
+        "id": 2,
+        "url": "./images/land2.jpg",
+        "clicked": false
+    },
+    {
+        "id": 3,
+        "url": "./images/land3.jpg",
+        "clicked": false
+    },
+    {
+        "id": 4,
+        "url": "./images/land4.jpg",
+        "clicked": false
+    },
+    {
+        "id": 5,
+        "url": "./images/land5.jpg",
+        "clicked": false
+    },
+    {
+        "id": 6,
+        "url": "./images/land6.jpg",
+        "clicked": false
+    },
+    {
+        "id": 7,
+        "url": "./images/land7.jpg",
+        "clicked": false
+    },
+    {
+        "id": 8,
+        "url": "./images/land8.jpg",
+        "clicked": false
+    },
+    {
+        "id": 9,
+        "url": "./images/land9.jpg",
+        "clicked": false
+    },
+    {
+        "id": 10,
+        "url": "./images/land10.jpg",
+        "clicked": false
+    },
+    {
+        "id": 11,
+        "url": "./images/land11.jpg",
+        "clicked": false
+    },
+    {
+        "id": 12,
+        "url": "./images/land12.jpg",
+        "clicked": false
+    }
+]

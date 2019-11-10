@@ -1,0 +1,15 @@
+.imageDiv{
+    max-width: 200px;
+    max-height: auto;
+    display: block;
+    margin: 5px;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+img:hover{
+    border: blue solid 5px;
+}
