@@ -8,8 +8,11 @@
 img{
     height: 100%;
     width: 100%;
+    transition: transform .1s;
 }
 
 img:hover{
-    border: blue solid 5px;
+    /* border: rgb(48, 43, 43) solid 3px; */
+    border-radius: 5%;
+    transform: scale(1.1);
 }
