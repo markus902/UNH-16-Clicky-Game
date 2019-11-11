@@ -1,11 +1,12 @@
 .Navbar{
     color: white;
-    background-color: rgb(85, 17, 128);;
+    background-color: rgb(85, 17, 128);
     font-size: 2.3rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'ZCOOL KuaiLe', cursive;
 }
 
 .scores{
     font-size: 1rem;
     font-weight: bold;
 }
+
