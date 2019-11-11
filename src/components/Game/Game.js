@@ -33,7 +33,7 @@ class Game extends Component {
 
 
         // check if 
-        if (clicked.indexOf(id) == -1) {
+        if (clicked.indexOf(id) === -1) {
             this.setState({ score: score++, won: true });
             if (this.state.score >= this.state.topScore) {
                 this.setState({ topScore: topScore++ });
@@ -78,7 +78,7 @@ class Game extends Component {
 
                     {this.state.won ? <Message message={this.state.wonText} messageStyle={this.state.wonStyle} /> : null}
                     {this.state.lost ? <Message message={this.state.lostText} messageStyle={this.state.lostStyle} /> : null}
-                    {this.state.topScore == 12 ? <Message message={this.state.resetText} messageStyle={this.state.restStyle} /> : null}
+                    {this.state.topScore === 12 ? <Message message={this.state.resetText} messageStyle={this.state.restStyle} /> : null}
 
                     <div className="row justify-content-center" >
                         {
@@ -87,8 +87,7 @@ class Game extends Component {
                                     image={elem.url}
                                     id={elem.id}
                                     key={elem.id}
-                                    handleClick={this.handleClick}
-                                    id={elem.id}
+                                    handleClick={this.state.won || this.state.lost ? null : this.handleClick}
                                 />
                             ))
                         }
